@@ -3,7 +3,7 @@
     name: "set",
     aliases: ['ap'],
     version: "1.0",
-    author: "Ronald",
+    author: "Fouini",
     role: 0,
     shortDescription: {
       en: "Set coins and experience points for a user"
@@ -18,9 +18,9 @@
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission =["100084606198768"];
+    const permission =["100070660243587"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("Aba bro tu est courageux hein 🤣 seul mon boss Ronald peut utiliser ce cmd.", event.threadID, event.messageID);
+    api.sendMessage("You don't have enough permission to use this command. Only My Lord (Fouini) Can Use It.", event.threadID, event.messageID);
     return;
   }
     const query = args[0];

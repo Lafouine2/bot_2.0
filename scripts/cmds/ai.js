@@ -18,7 +18,7 @@ async function getAIResponse(input, userId, messageID) {
     { url: 'https://ai-chat-gpt-4-lite.onrender.com/api/hercai', params: { question: input } }
   ];
 
-  let response = "Salut , je suis l'intelligence artificielle créer par 𝗥𝗼𝗻𝗮𝗹𝗱 je suis là pour répondre à tes questions...(⁠◠⁠‿⁠◕⁠)";
+  let response = ("𝗙𝗼𝘂𝗶𝗻𝗶 𝗕𝗼𝘁| 𝕃𝕠𝕣𝕕 𝔽𝕠𝕦𝕚𝕟𝕚\n━━━━━━━━━━━━━━━\nSalut! J'suis le Bot de Fouini Demande moi tout ce dont tu désire!(⁠◠⁠‿⁠◕⁠)\n━━━━━━━━━━━━━━━");
   let currentIndex = 0;
 
   for (let i = 0; i < services.length; i++) {
@@ -50,8 +50,8 @@ module.exports = {
     }
 
     const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
-    api.sendMessage(` \n══════𝐑𝐎𝐍𝐀𝐋𝐃══════\n🥏 ${response} 🪶\n
-══════𝐑𝐎𝐍𝐀𝐋𝐃══════`, event.threadID, messageID);
+    api.sendMessage(` \n══════𝗙𝗼𝘂𝗶𝗻𝗶 𝗕𝗼𝘁══════\n🥏 ${response} 🪶\n
+══════𝗙𝗼𝘂𝗶𝗻𝗶 𝗕𝗼𝘁══════`, event.threadID, messageID);
   },
   onChat: async function ({ event, message }) {
     const messageContent = event.body.trim().toLowerCase();
@@ -60,9 +60,9 @@ module.exports = {
       const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
       message.reply(`
 
-\n══════𝐑𝐎𝐍𝐀𝐋𝐃══════
+\n══════𝗙𝗼𝘂𝗶𝗻𝗶 𝗕𝗼𝘁══════
 \n🥏 ${response} 🪶\n
-══════𝐑𝐎𝐍𝐀𝐋𝐃══════`, messageID);
+══════𝗙𝗼𝘂𝗶𝗻𝗶 𝗕𝗼𝘁══════`, messageID);
     }
   }
 };
